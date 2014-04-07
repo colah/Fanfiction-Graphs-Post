@@ -3,11 +3,12 @@ title: Fanfiction.net, Graphs, and PageRank: Oh My!
 date: 2014-02-28
 author: colah
 mathjax: on
+tags: math, fanfiction, graphs, visualization
 ---
 
 Have you ever wondered about the connections between stories on fanfiction.net, a website where people write derivative stories of works they like? (Unless you're weird like me, no, you probably haven't.) Clearly, there are different groups with different opinions about what stories are good. There's a more complicated structure than just a scale of quality of stories.
 
-Well, for some bizarre reason, I started analyzing fanfiction.net. To wet your appetite, here's a small visualization of Harry Potter stories on fanfiction.net as a graph:
+Well, for some bizarre reason, I started analyzing fanfiction.net. To whet your appetite, here's a small visualization of Harry Potter stories on fanfiction.net as a graph:
 
 <div class="bigcenterimgcontainer">
 <img src="img/HP_union_size_larger.png" alt="" style="">
@@ -238,52 +239,39 @@ In the case of the Internet, we interpret a website linking to another website a
 
 **Harry Potter top stories by PageRank:**
 
-(1) Harry Potter and the Nightmares of Futures Past (8.97889327)
-(2) Make A Wish (7.93161420843)
-(3) Realizations (7.5272404382)
-(4) Poison Pen (6.90003490535)
-(5) Oh God Not Again! (6.55448282307)
-(6) A Black Comedy (6.22269137202)
-(7) To Shape and Change (6.12800445009)
-(8) Lord of Caer Azkaban (5.77633220949)
-(9) The Lie I've Lived (5.77580873603)
-(10) His Own Man (5.35246225041)
-(11) Harry Potter and the Methods of Rationality (5.16490335475)
-(12) Harry Crow (4.94247999591)
-(13) Harry Potter And The Summer Of Change (4.78256150739)
-(14) Delenda Est (4.75238318694)
-(15) An Aunt's Love (4.73469693544)
-(16) ...
+<ol>
+        <li><a href="http://fanfiction.net/s/1260679">Realizations</a> (16.4)</li>
+        <li><a href="http://fanfiction.net/s/2636963">Harry Potter and the Nightmares of Futures Past</a> (15.7)</li>
+        <li><a href="http://fanfiction.net/s/2318355">Make A Wish</a> (14.0)</li>
+        <li><a href="http://fanfiction.net/s/5554780">Poison Pen</a> (11.7)</li>
+        <li><a href="http://fanfiction.net/s/6413108">To Shape and Change</a> (11.5)</li>
+        <li><a href="pagerank/hp.html"><b>More</b></a>
+</ol>
+
 
 
 **Naruto top stories by PageRank:**
 
-(1) Team 8 (11.1638219556)
-(2) Naruto: Myoushuu no Fuuin (6.42967321043)
-(3) It's For a Good Cause, I Swear! (5.57768838353)
-(4) The Sealed Kunai (5.24903743168)
-(5) Chunin Exam Day (5.14212258792)
-(6) Better Left Unsaid (4.24301874048)
-(7) The Dichotomy of Namikaze Naruto (4.06902329344)
-(8) Ripples (3.98406655602)
-(9) Neo Yondaime Hokage (3.96637117774)
-(10) Naruto: Game of the Year Edition (3.92832766505)
-(11) ...
+<ol>
+        <li><a href="http://fanfiction.net/s/2731239">Team 8</a> (11.1)</li>
+        <li><a href="http://fanfiction.net/s/6694302">Naruto: Myoushuu no Fuuin</a> (6.42)</li>
+        <li><a href="http://fanfiction.net/s/5409165">It's For a Good Cause, I Swear!</a> (5.57)</li>
+        <li><a href="http://fanfiction.net/s/6051938">The Sealed Kunai</a> (5.24)</li>
+        <li><a href="http://fanfiction.net/s/3929411">Chunin Exam Day</a> (5.14)</li>
+        <li><a href="pagerank/naruto.html"><b>More</b></a>
+</ol>
 
 
 **Twilight top stories by PageRank:**
 
-(1) The Blessing and the Curse (18.6217297811)
-(2) Tropic of Virgo (15.0218120789)
-(3) A Rough Start (12.7611042705)
-(4) Creature of Habit (12.6476879833)
-(5) The Plan (10.212420851)
-(6) High Anxiety (9.03310345142)
-(7) For the Summer (8.76037948412)
-(8) The Vampire in the Basement (8.72666750989)
-(9) The Cannabean Betrothal (8.68746342005)
-(10) The Best I Ever Had (8.68039369571)
-(11) ...
+<ol>
+        <li><a href="http://fanfiction.net/s/5100876">The Blessing and the Curse</a> (18.6)</li>
+        <li><a href="http://fanfiction.net/s/4901517">Tropic of Virgo</a> (15.0)</li>
+        <li><a href="http://fanfiction.net/s/5319052">A Rough Start</a> (12.7)</li>
+        <li><a href="http://fanfiction.net/s/4769414">Creature of Habit</a> (12.6)</li>
+        <li><a href="http://fanfiction.net/s/6550419">The Plan</a> (10.2)</li>
+        <li><a href="pagerank/twi.html"><b>More</b></a>
+</ol>
 
 One neat thing we can do is give nodes on our graphs a size based on their PageRank. (We can also color nodes based on the first three components of the singular value decomposition of the adjacency matrix.)
 
@@ -307,18 +295,50 @@ $$R_u(s) = \sum_{v\in F_s \setminus \{u\}} \left(\frac{|S(u)\cap S(v)|}{20+|S(v)
 
 where $F_s$ is the set of users who favorited $s$ and $S(u)$ is the stories favorited by the user $u$.
 
-For example, we can make recommendations for S'Tarken, the author of our top Harry Potter story by PageRank:
+For example, we can make recommendations for S'Tarken, the author of the most favorited Harry Potter story on fanfiction.net:
 
-* 8.102 - Harry Potter and the Nightmares of Futures Past (2636963)
-* 6.230 - Harry Potter and Fate\'s Debt (2479927)
-* 5.410 - Make A Wish (2318355)
-* 5.256 - Backwards Compatible (1594791)
-* 5.076 - The World Without Me (2156663)
+<ul>
+	<li>*<a href="http://fanfiction.net/s/2559745">Learning to Breathe</a> (1.459)</li>
+	<li>*<a href="http://fanfiction.net/s/2954601">Taking Control</a> (1.383)</li>
+	<li>*<a href="http://fanfiction.net/s/1594791">Backwards Compatible</a> (1.381)</li>
+	<li>*<a href="http://fanfiction.net/s/2636963">Harry Potter and the Nightmares of Futures Past</a> (1.377)</li>
+	<li>*<a href="http://fanfiction.net/s/2479927">Harry Potter and Fate's Debt</a> (1.218)</li>
+	<li>...</li>
+</ul>
 
-These are all very popular stories. It's not very useful to S'Tarken if we recommend them extremely popular stories that they've almost certainly seen before. As such, it is interesting to penalize the popularity of stories.
+A * denotes that this is already one of the users favorite stories or one of their own stories. We can exclude their favorite stories, and their own stories:
 
-Consider $\frac{R_u(s)}{|F_s|^k}$. When $k = 0$, it's our original rank. When $k = 1$, it full normalizes stories against popularity. And in between, it penalizes popularity to varying degrees.
+<ul>
+	<li><a href="http://fanfiction.net/s/2318355">Make A Wish</a> (0.949)</li>
+	<li><a href="http://fanfiction.net/s/3401052">A Black Comedy</a> (0.750)</li>
+	<li><a href="http://fanfiction.net/s/4536005">Oh God Not Again!</a> (0.679)</li>
+	<li><a href="http://fanfiction.net/s/1260679">Realizations</a> (0.642)</li>
+	<li><a href="http://fanfiction.net/s/2107570">Lord of Caer Azkaban</a> (0.635)</li>
+	<li>...</li>
+</ul>
 
+These are all very popular stories. It's not very useful to S'TarKan if we recommend them extremely popular stories that they've almost certainly seen before. As such, it is interesting to penalize the popularity of stories.
+
+Consider $\frac{R_u(s)}{|F_s|^k}$. When $k = 0$, it's our original rank. When $k = 1$, it full normalizes stories against popularity. And in between, it penalizes popularity to varying degrees. If we set k = 0.7, we get these recommendations:
+
+<ul>
+	<li><a href="http://fanfiction.net/s/2114122">Insanity</a> (0.034)</li>
+	<li><a href="http://fanfiction.net/s/1995612">Shadow of the Serpent</a> (0.032)</li>
+	<li><a href="http://fanfiction.net/s/2160456">The Bargain</a> (0.031)</li>
+	<li><a href="http://fanfiction.net/s/1975479">Sinners</a> (0.029)</li>
+	<li><a href="http://fanfiction.net/s/926568">Harry Potter and the Order of the Phoenix</a> (0.029)</li>
+	<li>...</li>
+</ul>
+
+These are unpopular stories that similar users tend to like. Though, perhaps 0.7 is a bit too extreme.
+
+Curious about what this algorithm would recomend for you? If you're a popular fanfiction author, you may be in my recommendations for top users for [Harry Potter], [Naurto] or [Twilight].
+
+Since my scripts can't look at your author name while complying with fanfiction.net's terms of service, you will need to know your *author ID*. To get it, go to your fanfiction.net profile page and look at the URL. It will be of the form: `http://fanfiction.net/u/author_ID/...`. Then search for your author ID in the file!
+
+[Harry Potter]:recs/hp.html
+[Naurto]:recs/nar.html
+[Twilight]:recs/twi.html
 
 Conclusion
 ----------
@@ -333,7 +353,7 @@ In light of all this, I'd like to reflect on a few things.
 
 **Fanfiction Websites**: I think there's a lot of potential for fanfiction websites to better serve their users based on the techniques outlined here. I'd be really thrilled to see fanficiton.net or Archive Of Our Own adopt some of these ideas. Imagine being able to list a handful of stories in some category you're interested in and discover others? Or get good recommendations? The ideas are all pretty straightforward once you think of them. I'd be very happy to talk to the groups behind different fanfiction websites and provide some help or share example code.
 
-**Deep Learning and NLP**: Recently, there's been some really cool results in applying Deep Learning to Natural Language Processing. (In particular, everything by [Richard Socher](http://www.socher.org/), and the [Mikolov word embedding results](http://research.microsoft.com/pubs/189726/rvecs.pdf).) One would need a lot more data than I collected, and it would take more effort, but I bet one could do some really interesting things here.
+**Deep Learning and NLP**: Recently, there's been some really cool results in applying Deep Learning to Natural Language Processing. One would need a lot more data than I collected, and it would take more effort, but I bet one could do some really interesting things here.
 
 **Resources**: In principle, I'd really like to share my code and make it easy for people to replicate the work I described here. However, I think that would be really rude to fanfiction.net because it could result in lots of people scraping their website, and it seems likely many would remove my rate limiter. An alternative would be to share my extracted metadata, but, again, I think it would be really rude to do that without fanfiction.net's permission, and possibly a violation of their terms of service. So, in the end, I'm not sharing any resources. That said, all of this can be done pretty easily.
 
