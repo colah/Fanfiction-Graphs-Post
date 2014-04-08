@@ -1,6 +1,6 @@
 ---
 title: Fanfiction.net, Graphs, and PageRank: Oh My!
-date: 2014-02-28
+date: 2014-04-07
 author: colah
 mathjax: on
 tags: math, fanfiction, graphs, visualization
@@ -295,7 +295,7 @@ $$R_u(s) = \sum_{v\in F_s \setminus \{u\}} \left(\frac{|S(u)\cap S(v)|}{20+|S(v)
 
 where $F_s$ is the set of users who favorited $s$ and $S(u)$ is the stories favorited by the user $u$.
 
-For example, we can make recommendations for S'Tarken, the author of the most favorited Harry Potter story on fanfiction.net:
+For example, we can make recommendations for S'TarKan, the author of the most favorited Harry Potter story on fanfiction.net:
 
 <ul>
 	<li>*<a href="http://fanfiction.net/s/2559745">Learning to Breathe</a> (1.459)</li>
@@ -330,11 +330,13 @@ Consider $\frac{R_u(s)}{|F_s|^k}$. When $k = 0$, it's our original rank. When $k
 	<li>...</li>
 </ul>
 
-These are unpopular stories that similar users tend to like. Though, perhaps 0.7 is a bit too extreme.
+You can think of these as stories that are *unexpectedly* popular amongst similar users. Similar users like them a lot more than random users like them. (Though, perhaps 0.7 is a bit too extreme.)
 
-Curious about what this algorithm would recomend for you? If you're a popular fanfiction author, you may be in my recommendations for top users for [Harry Potter], [Naurto] or [Twilight].
+Curious about what this algorithm would recommend for you? If you're a popular fanfiction author, you may be in my recommendations for top users for [Harry Potter], [Naurto] or [Twilight].
 
 Since my scripts can't look at your author name while complying with fanfiction.net's terms of service, you will need to know your *author ID*. To get it, go to your fanfiction.net profile page and look at the URL. It will be of the form: `http://fanfiction.net/u/author_ID/...`. Then search for your author ID in the file!
+
+I'm certain one could do much better if they wanted to put a bit more effort into it. :)
 
 [Harry Potter]:recs/hp.html
 [Naurto]:recs/nar.html
