@@ -1,7 +1,8 @@
 ---
 title: Fanfiction.net, Graphs, and PageRank: Oh My!
-date: 2014-04-07
-author: colah
+date: 2014-07-06
+author: Chris Olah
+published: true
 mathjax: on
 tags: math, fanfiction, graphs, visualization
 ---
