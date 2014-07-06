@@ -224,6 +224,8 @@ And by ship:
 </div>
 <div class="spaceafterimg"></div>
 
+One thing that seems pretty surprising, without inside knowledge of the fandom, is the lack of stories where the pairing involves Jacob. On further inspection, we find that there are stories like that on fanfiction.net, but they aren't amongst the most highly reviewed. Perhaps this pairing prefers other websites? I'd love comments from anyone with insight into this.
+
 You can also explore an [interactive graph of Naruto fanfiction](graphs/NAR-ship/) and of [Twilight fanfiction](graphs/TWI-ship/).
 
 PageRank
@@ -235,7 +237,7 @@ A naive approach would be to select the most favorited or reviewed stories. But 
 
 In a normal vote gives equal weight to every voter. But some voters are better qualified to decide than others. In PageRank, we recalculate the votes again and again, giving each "person's" vote a weight based on how many votes they received in the previous step.
 
-In the case of the Internet, we interpret a website linking to another website as  that website voting for the one it links to. We can similarly apply it to fanfiction by interpreting stories "voting" for the stories users are most likely to like, given that they like the voter.
+In the case of the Internet, we interpret a website linking to another website as  that website voting for the one it links to. Similarly, we can apply it to fanfiction by interpreting story A as "voting" for a story B with a weight of the probability that a user who likes A also likes B.
 
 **Harry Potter top stories by PageRank:**
 
@@ -332,14 +334,14 @@ Consider $\frac{R_u(s)}{|F_s|^k}$. When $k = 0$, it's our original rank. When $k
 
 You can think of these as stories that are *unexpectedly* popular amongst similar users. Similar users like them a lot more than random users like them. (Though, perhaps 0.7 is a bit too extreme.)
 
-Curious about what this algorithm would recommend for you? If you're a popular fanfiction author, you may be in my recommendations for top users for [Harry Potter], [Naurto] or [Twilight].
+Curious about what this algorithm would recommend for you? If you're a popular fanfiction author, you may be in my recommendations for top users for [Harry Potter], [Naruto] or [Twilight].
 
 Since my scripts can't look at your author name while complying with fanfiction.net's terms of service, you will need to know your *author ID*. To get it, go to your fanfiction.net profile page and look at the URL. It will be of the form: `http://fanfiction.net/u/author_ID/...`. Then search for your author ID in the file!
 
 I'm certain one could do much better if they wanted to put a bit more effort into it. :)
 
 [Harry Potter]:recs/hp.html
-[Naurto]:recs/nar.html
+[Naruto]:recs/nar.html
 [Twilight]:recs/twi.html
 
 Conclusion
@@ -351,15 +353,17 @@ In light of all this, I'd like to reflect on a few things.
 
 **Digital Humanities**: Digital humanities also seems to be a bit of a buzzword. But I hope this provides a simple example of the power that can come from applying a little bit of math and computer science to humanities problems.
 
-**Metdata and Privacy**: In this essay, we looked analyzed stories by looking at whether they were favorited by the same users. There's a natural "dual" to this: analyzing users by looking at whether they favorited the same stories. This would give us a graph of connections between users and allow us to find clusters of users. But what if you use other forms of metdata? For example, we now know that the US government has metdata on who phones who. It seems very likely that many companies and governments have information on where your cellphone is as a function of time. All this can construct a graph of society. I can't really fathom how much one must be able to learn about someone from that. (And how easy it would be to misinterpret.)
+**Metadata and Privacy**: In this essay, we analyzed stories by looking at whether they were favorited by the same users. There's a natural "dual" to this: analyzing users by looking at whether they favorited the same stories. This would give us a graph of connections between users and allow us to find clusters of users. But what if you use other forms of metadata? For example, we now know that the US government has metadata on who phones who. It seems very likely that many companies and governments have information on where your cellphone is as a function of time. All this can construct a graph of society. I can't really fathom how much one must be able to learn about someone from that. (And how easy it would be to misinterpret.)
 
-**Fanfiction Websites**: I think there's a lot of potential for fanfiction websites to better serve their users based on the techniques outlined here. I'd be really thrilled to see fanficiton.net or Archive Of Our Own adopt some of these ideas. Imagine being able to list a handful of stories in some category you're interested in and discover others? Or get good recommendations? The ideas are all pretty straightforward once you think of them. I'd be very happy to talk to the groups behind different fanfiction websites and provide some help or share example code.
+**Fanfiction Websites**: I think there's a lot of potential for fanfiction websites to better serve their users based on the techniques outlined here. I'd be really thrilled to see fanfiction.net or Archive Of Our Own adopt some of these ideas. Imagine being able to list a handful of stories in some category you're interested in and discover others? Or get good recommendations? The ideas are all pretty straightforward once you think of them. I'd be very happy to talk to the groups behind different fanfiction websites and provide some help or share example code.
 
 **Deep Learning and NLP**: Recently, there's been some really cool results in applying Deep Learning to Natural Language Processing. One would need a lot more data than I collected, and it would take more effort, but I bet one could do some really interesting things here.
 
+**t-SNE**: [t-Distributed Stochastic Neighbor Embedding], is an algorithm for visualizing the structure of high-dimensional data. It would be a much simpler approach to understanding the structure of fanfiction than the graph based one I used here, and probably give much better results. If I was starting again, I would use it.
+
 **Resources**: In principle, I'd really like to share my code and make it easy for people to replicate the work I described here. However, I think that would be really rude to fanfiction.net because it could result in lots of people scraping their website, and it seems likely many would remove my rate limiter. An alternative would be to share my extracted metadata, but, again, I think it would be really rude to do that without fanfiction.net's permission, and possibly a violation of their terms of service. So, in the end, I'm not sharing any resources. That said, all of this can be done pretty easily.
 
-
+[t-Distributed Stochastic Neighbor Embedding]: http://homepage.tudelft.nl/19j49/t-SNE.html
 
 
 
