@@ -85,7 +85,7 @@ Our experience was that it didn't matter too much for the results, for large gra
 
 (It's worth noting that many of these could easily generalize to higher-dimensional edges for a weighted hyper-graph.)
 
-In our selected weight definition, $W_{a, b} = \frac{|F_a \cap F_b|}{|F_a \cup F_b|}$, we give equal weight to the preferences of all users. But there's a lot of variance between users: some favorite everyting under the sun, while others very selectively favorite stories they really like. If we give the users who favorite thousands of stories the same weight as users who favorite ten, the users who favorite thousands dominate everything (and aren't a very good signal).
+In our selected weight definition, $W_{a, b} = \frac{|F_a \cap F_b|}{|F_a \cup F_b|}$, we give equal weight to the preferences of all users. But there's a lot of variance between users: some favorite everything under the sun, while others very selectively favorite stories they really like. If we give the users who favorite thousands of stories the same weight as users who favorite ten, the users who favorite thousands dominate everything (and aren't a very good signal).
 
 Instead, we give each user $u$ a weight of $\frac{1}{20+n(u)}$ where $n(u)$ denotes the number of stories $u$ has favorited. This results in a measure on the space of users, $\mu(S) = \sum_{u \in S} \frac{1}{20+n(u)}$,  and the equation for our weights becomes $W_{a, b} = \frac{\mu(F_a \cap F_b)}{\mu(F_a \cup F_b)}$.
 
@@ -150,7 +150,7 @@ Another cause of clusters may be the "ship" (romantic pairing of the story). Man
 
 (Note: Ships are inferred from tags story summaries. HP = Harry Potter, HG = Hermione Granger, GW = Ginny Weasley, DM = Draco Malfoy, SS = Severus Snape and LV = Lord Voldemort.)
 
-One interesting point is that by far the most diffuse ship is HP/GW. It seems likely that this is because it is the ship we see in cannon Harry Potter, and so many stories not focused on romance default to it and unaligned readers are more tolerant of it.
+One interesting point is that by far the most diffused ship is HP/GW. It seems likely that this is because it is the ship we see in cannon Harry Potter, and so many stories not focused on romance default to it and unaligned readers are more tolerant of it.
 
 One striking pattern in fanfiction is that a massive fraction of stories are male/male pairings. Such stories are frequently referred to as "slash." (For an exploration of why there is so much slash fanficiton, see this article.)
 
