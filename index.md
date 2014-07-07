@@ -366,5 +366,10 @@ In light of all this, I'd like to reflect on a few things.
 
 [t-Distributed Stochastic Neighbor Embedding]: http://homepage.tudelft.nl/19j49/t-SNE.html
 
+*(This post is a fun experiment done primarily for amusement. I would be delighted to hear your comments and thoughts: you can comment inline or at the end. For typos, technical errors, or clarifications you would like to see added, you are encouraged to make a pull request on [github](https://github.com/colah/Fanfiction-Graphs-Post). If you enjoyed this post, you might consider subscribing to my [RSS feed](../../rss.xml).)*
 
+Acknowledgments
+----------------
+
+Thank you to Eliana Lorch, Taren Stinebrickner-Kauffman, and Jacob Steinhardt for their comments and encouragement.
 
