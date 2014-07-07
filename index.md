@@ -150,7 +150,7 @@ Another cause of clusters may be the "ship" (romantic pairing of the story). Man
 
 (Note: Ships are inferred from tags story summaries. HP = Harry Potter, HG = Hermione Granger, GW = Ginny Weasley, DM = Draco Malfoy, SS = Severus Snape and LV = Lord Voldemort.)
 
-One interesting point is that by far the most diffuse ship is HP/GW. It seems likely that this is because it is the ship we see in cannon Harry Potter, and so many stories not focused on romance default to it and unaligned readers are more tolerant of it.
+One interesting point is that by far the most diffused ship is HP/GW. It seems likely that this is because it is the ship we see in cannon Harry Potter, and so many stories not focused on romance default to it and unaligned readers are more tolerant of it.
 
 One striking pattern in fanfiction is that a massive fraction of stories are male/male pairings. Such stories are frequently referred to as "slash." (For an exploration of why there is so much slash fanficiton, see this article.)
 
