@@ -1,5 +1,5 @@
 ---
-title: Fanfiction.net, Graphs, and PageRank: Oh My!
+title: Fanfiction, Graphs, and PageRank
 date: 2014-07-06
 author: Chris Olah
 published: true
@@ -7,19 +7,28 @@ mathjax: on
 tags: math, fanfiction, graphs, visualization
 ---
 
-Have you ever wondered about the connections between stories on fanfiction.net, a website where people write derivative stories of works they like? (Unless you're weird like me, no, you probably haven't.) Clearly, there are different groups with different opinions about what stories are good. There's a more complicated structure than just a scale of quality of stories.
+On a website called fanfiction.net, users write millions of stories about their favorite stories. They have diverse opinions about them. They love some stories, and hate others. The opinions are noisy, and it's hard to see the big picture.
 
-Well, for some bizarre reason, I started analyzing fanfiction.net. To whet your appetite, here's a small visualization of Harry Potter stories on fanfiction.net as a graph:
+With tools from mathematics and some helpful software, however, we can visualize the underlying structure.
 
 <div class="bigcenterimgcontainer">
-<img src="img/HP_union_size_larger.png" alt="" style="">
+<img src="img/graph-HP-ships-labeled.png" alt="" style="">
+<div class="caption">Graph of Harry Potter Fanfiction, colored by ship</div>
 </div>
 <div class="spaceafterimg"></div>
 
+In the following post, we will visualize the Harry Potter, Naruto and Twilight fandoms on fanfiction.net. We will also use Google's PageRank algorithm to rank stories, and perform collaborative filtering to make story recommendations to top fanfiction.net users.
 
-This blog post will explore the structure of the relationships between stories on fanfiction.net by constructing visualizations like the above, and much much larger ones. It will also provide story recommendations for many of the top users of fanfiction.net.
+If you're not interested in the details, you can skip to the following:
+
+**Interactive Graphs**: [Harry Potter](graphs/HP-ship/), [Naruto](graphs/NAR-ship/), [Twilight](graphs/TWI-ship/)
+
+**Story Rankings**: [Harry Potter](pagerank/hp.html), [Naruto](pagerank/naruto.html), [Twilight](pagerank/twi.html)
+
+**Story Recommendations**: [Harry Potter](recs/hp.html), [Naruto](recs/nar.html), [Twilight](recs/twi.html)
 
 
+And of course, you might skim below to see the pretty pictures!
 
 Introduction
 -------------
@@ -31,8 +40,6 @@ The sheer amount of fanfiction out there is rather staggering. The total number 
 Some research was done into the demographics of fanfiction.net users and other topics by [FFN Research]. They found that 78% of fanfiction.net authors who joined in 2010 identified as female. Further, around 80% of users who report their age are between 13 and 17.
 
 A lot of other interesting research and analysis has been done on the blogs [Destination: Toast!] and [TOASTYSTATS].
-
-In this post, we will examine the relationships between different Harry Potter stories on fanfiction.net. We will create visualizations, experiment with the application of Google's PageRank algorithm, and finally construct a crude recommendation tool. We will also discuss a number of directions for future exploration.
 
 [fanficiton.net]:https://www.fanfiction.net/
 [FFN Research]:http://ffnresearch.blogspot.com/
@@ -152,7 +159,7 @@ Another cause of clusters may be the "ship" (romantic pairing of the story). Man
 
 One interesting point is that by far the most diffused ship is HP/GW. It seems likely that this is because it is the ship we see in cannon Harry Potter, and so many stories not focused on romance default to it and unaligned readers are more tolerant of it.
 
-One striking pattern in fanfiction is that a massive fraction of stories are male/male pairings. Such stories are frequently referred to as "slash." (For an exploration of why there is so much slash fanficiton, see this article.)
+One striking pattern in fanfiction is that a massive fraction of stories are male/male pairings. Such stories are frequently referred to as "slash."
 
 <div class="bigcenterimgcontainer">
 <img src="img/graph-HP-slash-labeled.png" alt="" style="">
@@ -371,5 +378,5 @@ In light of all this, I'd like to reflect on a few things.
 Acknowledgments
 ----------------
 
-Thank you to Eliana Lorch, Taren Stinebrickner-Kauffman, and Jacob Steinhardt for their comments and encouragement.
+Thank you to Eliana Lorch, Taren Stinebrickner-Kauffman, Mary Becica, and Jacob Steinhardt for their comments and encouragement.
 
